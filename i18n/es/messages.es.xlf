@@ -4224,7 +4224,7 @@
               </target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/frontend/login/template.html</context>
-          <context context-type="linenumber">44</context>
+          <context context-type="linenumber">45</context>
         </context-group>
       </trans-unit>
       <trans-unit id="7927427229271598667" datatype="html">
@@ -4235,7 +4235,7 @@
               </target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/frontend/login/template.html</context>
-          <context context-type="linenumber">51</context>
+          <context context-type="linenumber">49</context>
         </context-group>
       </trans-unit>
       <trans-unit id="1268395641466243700" datatype="html">
@@ -4247,7 +4247,7 @@
               </target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/frontend/login/template.html</context>
-          <context context-type="linenumber">58</context>
+          <context context-type="linenumber">53</context>
         </context-group>
       </trans-unit>
       <trans-unit id="5434669375404653384" datatype="html">
@@ -4255,7 +4255,7 @@
         <target>Ingresar token</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/frontend/login/template.html</context>
-          <context context-type="linenumber">74</context>
+          <context context-type="linenumber">70</context>
         </context-group>
       </trans-unit>
       <trans-unit id="5248717555542428023" datatype="html">
@@ -4263,7 +4263,7 @@
         <target>Nombre de usuario</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/frontend/login/template.html</context>
-          <context context-type="linenumber">87</context>
+          <context context-type="linenumber">83</context>
         </context-group>
       </trans-unit>
       <trans-unit id="1431416938026210429" datatype="html">
@@ -4271,7 +4271,7 @@
         <target>Contraseña</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/frontend/login/template.html</context>
-          <context context-type="linenumber">98</context>
+          <context context-type="linenumber">94</context>
         </context-group>
       </trans-unit>
       <trans-unit id="1498711031361519795" datatype="html">
@@ -4279,7 +4279,7 @@
         <target>Selecciona un fichero kubeconfig</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/frontend/login/template.html</context>
-          <context context-type="linenumber">107</context>
+          <context context-type="linenumber">123</context>
         </context-group>
       </trans-unit>
       <trans-unit id="1649590266934618453" datatype="html">
@@ -4292,7 +4292,7 @@
           </target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/frontend/login/template.html</context>
-          <context context-type="linenumber">117</context>
+          <context context-type="linenumber">133</context>
         </context-group>
       </trans-unit>
       <trans-unit id="6663783128602596673" datatype="html">
@@ -4300,7 +4300,7 @@
         <target> Iniciar sesión </target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/frontend/login/template.html</context>
-          <context context-type="linenumber">133</context>
+          <context context-type="linenumber">149</context>
         </context-group>
       </trans-unit>
       <trans-unit id="4170719254013309689" datatype="html">
@@ -4308,7 +4308,7 @@
         <target> Saltar </target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/frontend/login/template.html</context>
-          <context context-type="linenumber">142</context>
+          <context context-type="linenumber">158</context>
         </context-group>
       </trans-unit>
       <trans-unit id="1911298252045423500" datatype="html">
