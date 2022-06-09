@@ -17,7 +17,7 @@
 
 ARG BUILDPLATFORM
 
-FROM --platform=$BUILDPLATFORM ubuntu:20.04 as builder
+FROM --platform=$BUILDPLATFORM registry.caps.in.tum.de/ubuntu:18.04 as builder
 
 # Create a nonroot user for final image
 RUN useradd -u 10001 nonroot
