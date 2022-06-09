@@ -36,29 +36,25 @@ limitations under the License.
                               i18n>Basic</ng-container>
                 <ng-container *ngSwitchCase="loginModes.Token"
                               i18n>Token</ng-container>
+                <ng-container *ngSwitchCase="loginModes.Platform">TUM CAPS' IoT Platform</ng-container>
               </ng-container>
             </mat-radio-button>
             <div class="kd-login-mode-description"
                  [ngSwitch]="mode">
               <ng-container *ngSwitchCase="loginModes.Kubeconfig"
                             i18n>
-                Please select the kubeconfig file that you have created to configure access to the cluster. To find out
-                more about how to configure and use kubeconfig file, please refer to the
-                <a href="https://kubernetes.io/docs/tasks/access-application-cluster/configure-access-multiple-clusters/">Configure Access to Multiple Clusters</a>
-                section.
+                Please select the kubeconfig file that you have created to configure access to the cluster. To find out more about how to configure and use kubeconfig file, please refer to the <a href='https://kubernetes.io/docs/tasks/access-application-cluster/configure-access-multiple-clusters/'>Configure Access to Multiple Clusters</a> section.
               </ng-container>
               <ng-container *ngSwitchCase="loginModes.Basic"
                             i18n>
-                Make sure that support for basic authentication is enabled in the cluster. To find out more about how to
-                configure basic authentication, please refer to the
-                <a href="https://kubernetes.io/docs/admin/authentication/">Authenticating</a> and
-                <a href="https://kubernetes.io/docs/admin/authorization/abac/">ABAC Mode</a> sections.
+                Make sure that support for basic authentication is enabled in the cluster. To find out more about how to configure basic authentication, please refer to the <a href="https://kubernetes.io/docs/admin/authentication/">Authenticating</a> and <a href="https://kubernetes.io/docs/admin/authorization/abac/">ABAC Mode</a> sections.
               </ng-container>
               <ng-container *ngSwitchCase="loginModes.Token"
                             i18n>
-                Every Service Account has a Secret with valid Bearer Token that can be used to log in to Dashboard. To
-                find out more about how to configure and use Bearer Tokens, please refer to the
-                <a href="https://kubernetes.io/docs/admin/authentication/">Authentication</a> section.
+                Every Service Account has a Secret with valid Bearer Token that can be used to log in to Dashboard. To find out more about how to configure and use Bearer Tokens, please refer to the <a href='https://kubernetes.io/docs/admin/authentication/'>Authentication</a> section.
+              </ng-container>
+              <ng-container *ngSwitchCase="loginModes.Platform">
+                Login using your credentials for TUM CAPS' IoT Platform. If you cannot access this Dashboard despite proper credentials, please write an email to <a href="mailto:isaac.nunez@tum.de">Isaac Nunez</a>.
               </ng-container>
             </div>
           </div>
@@ -74,7 +70,7 @@ limitations under the License.
                    placeholder="Enter token"
                    type="password"
                    required
-                   (change)="onChange($event)" />
+                   (change)="onChange($event)">
           </mat-form-field>
           <div *ngSwitchCase="loginModes.Basic"
                fxLayout="column">
@@ -86,7 +82,7 @@ limitations under the License.
                      i18n-placeholder
                      placeholder="Username"
                      required
-                     (change)="onChange($event)" />
+                     (change)="onChange($event)">
             </mat-form-field>
 
             <mat-form-field fxFlex
@@ -98,10 +94,30 @@ limitations under the License.
                      placeholder="Password"
                      type="password"
                      required
-                     (change)="onChange($event)" />
+                     (change)="onChange($event)">
             </mat-form-field>
           </div>
-
+          <div *ngSwitchCase="loginModes.Platform"
+               fxLayout="column">
+            <mat-form-field fxFlex
+                            class="kd-login-input">
+              <input id="caps_username"
+                     name="caps_username"
+                     matInput
+                     placeholder="IoT Platform Username"
+                     required
+                     (change)="onChange($event)">
+            </mat-form-field>
+            <mat-form-field fxFlex
+                            class="kd-login-input">
+              <input id="caps_password"
+                     name="caps_password"
+                     matInput
+                     placeholder="IoT Platform Password"
+                     required
+                     (change)="onChange($event)">
+            </mat-form-field>
+          </div>
           <div *ngSwitchCase="loginModes.Kubeconfig"
                class="kd-login-input">
             <kd-upload-file label="Choose kubeconfig file"
@@ -110,16 +126,16 @@ limitations under the License.
           </div>
           <mat-error *ngFor="let error of errors"
                      class="kd-login-input kd-error kd-error-text">
-            {{ error.status }} ({{ error.code }}): {{ error.message }}
+            {{error.status}} ({{error.code}}): {{error.message}}
           </mat-error>
           <mat-error *ngIf="!isLoginEnabled()"
                      class="kd-login-input kd-error kd-error-text"
                      i18n>
-            Insecure access detected. Sign in will not be available. Access Dashboard securely over HTTPS or using
-            localhost. Read more
-            <a href="https://github.com/CAPS-Cloud/dashboard/blob/master/docs/user/accessing-dashboard/README.md#login-not-available"
+            Insecure access detected. Sign in will not be available. Access Dashboard securely over HTTPS or using localhost. Read more
+            <a href="https://github.com/CAPS-Cloud/kube-dashboard/blob/master/docs/user/accessing-dashboard/README.md#login-not-available"
                target="_blank">
-              here </a>.
+              here
+            </a>.
           </mat-error>
         </ng-container>
 

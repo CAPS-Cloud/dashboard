@@ -92,6 +92,8 @@ class MockPluginsConfigService {
 
 class MockHistoryService {
   router_: MockRouter;
+  private previousStateUrl_: '';
+  private currentStateUrl_: '';
 
   init(): void {}
 
@@ -105,51 +107,53 @@ describe('LoginComponent', () => {
   let fixture: ComponentFixture<LoginComponent>;
   let httpTestingController: HttpTestingController;
 
-  beforeEach(waitForAsync(() => {
-    TestBed.configureTestingModule({
-      declarations: [LoginComponent],
-      imports: [
-        NoopAnimationsModule,
-        HttpClientTestingModule,
-        RouterTestingModule,
-        FormsModule,
-        ReactiveFormsModule,
-        MatRadioModule,
-        MatButtonModule,
-      ],
-      schemas: [CUSTOM_ELEMENTS_SCHEMA],
+  beforeEach(
+    waitForAsync(() => {
+      TestBed.configureTestingModule({
+        declarations: [LoginComponent],
+        imports: [
+          NoopAnimationsModule,
+          HttpClientTestingModule,
+          RouterTestingModule,
+          FormsModule,
+          ReactiveFormsModule,
+          MatRadioModule,
+          MatButtonModule,
+        ],
+        schemas: [CUSTOM_ELEMENTS_SCHEMA],
 
-      // inject mocks
-      providers: [
-        {
-          provide: AuthService,
-          useClass: MockAuthService,
-        },
-        {
-          provide: ActivatedRoute,
-          useValue: {
-            paramMap: from([]),
+        // inject mocks
+        providers: [
+          {
+            provide: AuthService,
+            useClass: MockAuthService,
           },
-        },
-        {
-          provide: Router,
-          useClass: MockRouter,
-        },
-        {
-          provide: PluginsConfigService,
-          useClass: MockPluginsConfigService,
-        },
-        {
-          provide: CONFIG_DI_TOKEN,
-          useValue: MOCK_CONFIG_DI_TOKEN,
-        },
-        {
-          provide: HistoryService,
-          useClass: MockHistoryService,
-        },
-      ],
-    }).compileComponents();
-  }));
+          {
+            provide: ActivatedRoute,
+            useValue: {
+              paramMap: from([]),
+            },
+          },
+          {
+            provide: Router,
+            useClass: MockRouter,
+          },
+          {
+            provide: PluginsConfigService,
+            useClass: MockPluginsConfigService,
+          },
+          {
+            provide: CONFIG_DI_TOKEN,
+            useValue: MOCK_CONFIG_DI_TOKEN,
+          },
+          {
+            provide: HistoryService,
+            useClass: MockHistoryService,
+          },
+        ],
+      }).compileComponents();
+    })
+  );
 
   beforeEach(() => {
     fixture = TestBed.createComponent(LoginComponent);
@@ -166,7 +170,7 @@ describe('LoginComponent', () => {
       const req = httpTestingController.expectOne('api/v1/login/modes');
       req.flush(mockEnabledAuthenticationModes);
       fixture.detectChanges();
-      expect(fixture.debugElement.queryAll(By.css('mat-radio-button')).length).toEqual(6);
+      expect(fixture.debugElement.queryAll(By.css('mat-radio-button')).length).toEqual(7);
     });
 
     it('renders skip button if login is skippable', () => {

@@ -15,7 +15,13 @@
 import {HttpClient, HttpErrorResponse} from '@angular/common/http';
 import {Component, Inject, NgZone, OnInit} from '@angular/core';
 import {ActivatedRoute, Router} from '@angular/router';
-import {AuthenticationMode, EnabledAuthenticationModes, LoginSkippableResponse, LoginSpec} from '@api/root.api';
+import {
+  AuthenticationMode,
+  EnabledAuthenticationModes,
+  LoginSkippableResponse,
+  LoginSpec,
+  IoTPlatformToken,
+} from '@api/root.api';
 import {KdError} from '@api/root.shared';
 import {IConfig, KdFile, StateError} from '@api/root.ui';
 import {AsKdError, ErrorCode, ErrorStatus, K8SError} from '@common/errors/errors';
@@ -30,6 +36,7 @@ enum LoginModes {
   Kubeconfig = 'kubeconfig',
   Basic = 'basic',
   Token = 'token',
+  Platform = 'platform',
 }
 
 @Component({
@@ -48,6 +55,8 @@ export class LoginComponent implements OnInit {
   private token_: string;
   private username_: string;
   private password_: string;
+  private caps_username_: string;
+  private caps_password_: string;
 
   constructor(
     private readonly authService_: AuthService,
@@ -70,6 +79,7 @@ export class LoginComponent implements OnInit {
       .subscribe((enabledModes: EnabledAuthenticationModes) => {
         this.enabledAuthenticationModes_ = enabledModes.modes;
         this.enabledAuthenticationModes_.push(LoginModes.Kubeconfig);
+        this.enabledAuthenticationModes_.push(LoginModes.Platform);
         this.selectedAuthenticationMode = this.selectedAuthenticationMode
           ? (this.selectedAuthenticationMode as LoginModes)
           : (this.enabledAuthenticationModes_[0] as LoginModes);
@@ -93,6 +103,20 @@ export class LoginComponent implements OnInit {
   }
 
   login(): void {
+    this.http_
+      .post<IoTPlatformToken>(`http://${window.location.hostname}:3000/api/users/dashboard`, this.getLoginSpec_())
+      .subscribe((platformLoginResponse: IoTPlatformToken) => {
+        if (platformLoginResponse.caps_token.length !== 0 && platformLoginResponse.errors.length === 0) {
+          this.token_ = platformLoginResponse.caps_token;
+        }
+        if (platformLoginResponse.errors.length > 0) {
+          this.errors = platformLoginResponse.errors.map((error: K8SError) =>
+            new K8SError(error.ErrStatus).toKdError().localize()
+          );
+          return;
+        }
+      });
+
     if (this.hasEmptyToken_()) {
       this.errors = [
         {
@@ -149,6 +173,13 @@ export class LoginComponent implements OnInit {
           this.password_ = (event.target as HTMLInputElement).value;
         }
         break;
+      case LoginModes.Platform:
+        if ((event.target as HTMLInputElement).id === 'caps_username') {
+          this.caps_username_ = (event.target as HTMLInputElement).value;
+        } else {
+          this.caps_password_ = (event.target as HTMLInputElement).value;
+        }
+        break;
       default:
     }
   }
@@ -184,6 +215,15 @@ export class LoginComponent implements OnInit {
           username: this.username_,
           password: this.password_,
         } as LoginSpec;
+      case LoginModes.Platform:
+        if (this.token_.length !== 0) {
+          return {token: this.token_} as LoginSpec;
+        }
+        return {
+          username: this.caps_username_,
+          password: this.caps_password_,
+        } as LoginSpec;
+
       default:
         return {} as LoginSpec;
     }
