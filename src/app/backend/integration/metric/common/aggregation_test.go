@@ -18,8 +18,8 @@ import (
 	"reflect"
 	"testing"
 
-	"github.com/kubernetes/dashboard/src/app/backend/api"
-	metricapi "github.com/kubernetes/dashboard/src/app/backend/integration/metric/api"
+	"github.com/CAPS-Cloud/dashboard/src/app/backend/api"
+	metricapi "github.com/CAPS-Cloud/dashboard/src/app/backend/integration/metric/api"
 	"k8s.io/apimachinery/pkg/types"
 )
 

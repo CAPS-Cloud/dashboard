@@ -5,7 +5,7 @@
   "license": "Apache-2.0",
   "repository": {
     "type": "git",
-    "url": "https://github.com/kubernetes/dashboard.git"
+    "url": "https://github.com/CAPS-Cloud/dashboard.git"
   },
   "engines": {
     "node": ">=16.14.2",

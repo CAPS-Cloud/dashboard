@@ -15,9 +15,9 @@
 package v1
 
 import (
-	"github.com/kubernetes/dashboard/src/app/backend/resource/common"
-	"github.com/kubernetes/dashboard/src/app/backend/resource/customresourcedefinition/types"
-	"github.com/kubernetes/dashboard/src/app/backend/resource/dataselect"
+	"github.com/CAPS-Cloud/dashboard/src/app/backend/resource/common"
+	"github.com/CAPS-Cloud/dashboard/src/app/backend/resource/customresourcedefinition/types"
+	"github.com/CAPS-Cloud/dashboard/src/app/backend/resource/dataselect"
 	api "k8s.io/api/core/v1"
 	apiextensions "k8s.io/apiextensions-apiserver/pkg/apis/apiextensions/v1"
 	"k8s.io/apimachinery/pkg/runtime/schema"

@@ -1,6 +1,6 @@
 # kubernetes-dashboard
 
-[Kubernetes Dashboard](https://github.com/kubernetes/dashboard) is a general purpose, web-based UI for Kubernetes clusters.
+[Kubernetes Dashboard](https://github.com/CAPS-Cloud/dashboard) is a general purpose, web-based UI for Kubernetes clusters.
 It allows users to manage applications running in the cluster and troubleshoot them, as well as manage the cluster itself.
 
 ## TL;DR
@@ -14,7 +14,7 @@ helm install kubernetes-dashboard kubernetes-dashboard/kubernetes-dashboard
 
 ## Introduction
 
-This chart bootstraps a [Kubernetes Dashboard](https://github.com/kubernetes/dashboard) deployment on a [Kubernetes](https://kubernetes.io) cluster using the [Helm](https://helm.sh) package manager.
+This chart bootstraps a [Kubernetes Dashboard](https://github.com/CAPS-Cloud/dashboard) deployment on a [Kubernetes](https://kubernetes.io) cluster using the [Helm](https://helm.sh) package manager.
 
 ## Installing the Chart
 
@@ -41,13 +41,13 @@ The command removes all the Kubernetes components associated with the chart and 
 ## Access control
 
 It is critical for the Kubernetes cluster to correctly setup access control of Kubernetes Dashboard.
-See this [guide](https://github.com/kubernetes/dashboard/blob/master/docs/user/access-control/README.md) for details.
+See this [guide](https://github.com/CAPS-Cloud/dashboard/blob/master/docs/user/access-control/README.md) for details.
 
 It is highly recommended to use RBAC with minimal privileges needed for Dashboard to run.
 
 ## Configuration
 
-Please refer to [values.yaml](https://github.com/kubernetes/dashboard/blob/master/aio/deploy/helm-chart/kubernetes-dashboard/values.yaml)
+Please refer to [values.yaml](https://github.com/CAPS-Cloud/dashboard/blob/master/aio/deploy/helm-chart/kubernetes-dashboard/values.yaml)
 for valid values and their defaults.
 
 Specify each parameter using the `--set key=value[,key=value]` argument to `helm install`. For example,
@@ -101,7 +101,7 @@ To do that you can follow the [guide](https://helm.sh/blog/migrate-from-helm-v2-
 
 ## Access
 
-For information about how to access, please read the [kubernetes-dashboard manual](https://github.com/kubernetes/dashboard)
+For information about how to access, please read the [kubernetes-dashboard manual](https://github.com/CAPS-Cloud/dashboard)
 
 ### Using the dashboard with 'kubectl proxy'
 

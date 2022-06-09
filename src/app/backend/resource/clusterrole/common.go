@@ -15,7 +15,7 @@
 package clusterrole
 
 import (
-	"github.com/kubernetes/dashboard/src/app/backend/resource/dataselect"
+	"github.com/CAPS-Cloud/dashboard/src/app/backend/resource/dataselect"
 )
 
 // The code below allows to perform complex data section on []ClusterRole

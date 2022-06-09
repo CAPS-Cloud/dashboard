@@ -16,7 +16,7 @@ kubectl apply -f https://raw.githubusercontent.com/kubernetes/dashboard/master/a
 ### Compiling Plugins
 
 In order to take advantage of AOT compilation, sharing the code across plugins and not ship the core Angular packages with the plugin bundle, there is a custom build process to compile the plugins.
-You can clone this repository and checkout to [`plugin/base`](https://github.com/kubernetes/dashboard/tree/plugin/base) branch. The build process is specified under [`builders`](https://github.com/kubernetes/dashboard/tree/plugin/base/builders) directory.
+You can clone this repository and checkout to [`plugin/base`](https://github.com/CAPS-Cloud/dashboard/tree/plugin/base) branch. The build process is specified under [`builders`](https://github.com/CAPS-Cloud/dashboard/tree/plugin/base/builders) directory.
 
 On this branch, you can compile the plugin with following command
 
@@ -49,4 +49,4 @@ kubectl create configmap plugin1-src --from-file="./dist/bundle/plugin1.js"
 After following all the above steps, your new plugin should be available in the dashboard.
 
 ----
-_Copyright 2021 [The Kubernetes Dashboard Authors](https://github.com/kubernetes/dashboard/graphs/contributors)_
+_Copyright 2021 [The Kubernetes Dashboard Authors](https://github.com/CAPS-Cloud/dashboard/graphs/contributors)_

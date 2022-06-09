@@ -118,7 +118,7 @@ Kubernetes Dashboard の和訳を実施するにあたって、下記の配慮�
 
     `K8S_DASHBOARD_BIND_ADDRESS=0.0.0.0 aio/develop/run-npm-on-container.sh`
 * Pull Request を `kubernetes/dashboard` リポジトリに提出します。
-* 新たに翻訳すべき原文の追加や修正が発生しているかは、[`kubernetes/dashboard` リポジトリの`language/ja` ラベルが付いた Pull Request](https://github.com/kubernetes/dashboard/pulls?utf8=%E2%9C%93&q=is%3Apr+label%3Alanguage%2Fja) を監視することで行います。
+* 新たに翻訳すべき原文の追加や修正が発生しているかは、[`kubernetes/dashboard` リポジトリの`language/ja` ラベルが付いた Pull Request](https://github.com/CAPS-Cloud/dashboard/pulls?utf8=%E2%9C%93&q=is%3Apr+label%3Alanguage%2Fja) を監視することで行います。
 
 ### 原文修正
 

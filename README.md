@@ -1,11 +1,11 @@
 # Kubernetes Dashboard
 
-[![Continuous Integration](https://github.com/kubernetes/dashboard/workflows/Continuous%20Integration/badge.svg)](https://github.com/kubernetes/dashboard/actions?query=workflow%3A%22Continuous+Integration%22)
-[![Continuous Deployment](https://github.com/kubernetes/dashboard/workflows/Continuous%20Deployment/badge.svg)](https://github.com/kubernetes/dashboard/actions?query=workflow%3A%22Continuous+Deployment%22)
-[![Go Report Card](https://goreportcard.com/badge/github.com/kubernetes/dashboard)](https://goreportcard.com/report/github.com/kubernetes/dashboard)
+[![Continuous Integration](https://github.com/CAPS-Cloud/dashboard/workflows/Continuous%20Integration/badge.svg)](https://github.com/CAPS-Cloud/dashboard/actions?query=workflow%3A%22Continuous+Integration%22)
+[![Continuous Deployment](https://github.com/CAPS-Cloud/dashboard/workflows/Continuous%20Deployment/badge.svg)](https://github.com/CAPS-Cloud/dashboard/actions?query=workflow%3A%22Continuous+Deployment%22)
+[![Go Report Card](https://goreportcard.com/badge/github.com/CAPS-Cloud/dashboard)](https://goreportcard.com/report/github.com/CAPS-Cloud/dashboard)
 [![Coverage Status](https://codecov.io/github/kubernetes/dashboard/coverage.svg?branch=master)](https://codecov.io/github/kubernetes/dashboard?branch=master)
-[![GitHub release](https://img.shields.io/github/release/kubernetes/dashboard.svg)](https://github.com/kubernetes/dashboard/releases/latest)
-[![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://github.com/kubernetes/dashboard/blob/master/LICENSE)
+[![GitHub release](https://img.shields.io/github/release/kubernetes/dashboard.svg)](https://github.com/CAPS-Cloud/dashboard/releases/latest)
+[![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://github.com/CAPS-Cloud/dashboard/blob/master/LICENSE)
 
 Kubernetes Dashboard is a general purpose, web-based UI for Kubernetes clusters. It allows users to manage applications running in the cluster and troubleshoot them, as well as manage the cluster itself.
 
@@ -60,7 +60,7 @@ You can reach the maintainers of this project at:
 
 * [**#sig-ui on Kubernetes Slack**](https://kubernetes.slack.com)
 * [**kubernetes-sig-ui mailing list** ](https://groups.google.com/forum/#!forum/kubernetes-sig-ui)
-* [**Issue tracker**](https://github.com/kubernetes/dashboard/issues)
+* [**Issue tracker**](https://github.com/CAPS-Cloud/dashboard/issues)
 * [**SIG info**](https://github.com/kubernetes/community/tree/master/sig-ui)
 * [**Roles**](ROLES.md)
 
@@ -74,7 +74,7 @@ Participation in the Kubernetes community is governed by the [Kubernetes Code of
 
 ## License
 
-[Apache License 2.0](https://github.com/kubernetes/dashboard/blob/master/LICENSE)
+[Apache License 2.0](https://github.com/CAPS-Cloud/dashboard/blob/master/LICENSE)
 
 ----
-_Copyright 2019 [The Kubernetes Dashboard Authors](https://github.com/kubernetes/dashboard/graphs/contributors)_
+_Copyright 2019 [The Kubernetes Dashboard Authors](https://github.com/CAPS-Cloud/dashboard/graphs/contributors)_

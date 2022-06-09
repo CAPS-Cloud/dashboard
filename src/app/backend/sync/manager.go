@@ -15,7 +15,7 @@
 package sync
 
 import (
-	syncApi "github.com/kubernetes/dashboard/src/app/backend/sync/api"
+	syncApi "github.com/CAPS-Cloud/dashboard/src/app/backend/sync/api"
 	"k8s.io/apimachinery/pkg/watch"
 	"k8s.io/client-go/kubernetes"
 )

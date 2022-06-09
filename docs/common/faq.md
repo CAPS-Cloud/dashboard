@@ -1,6 +1,6 @@
 # FAQ
 
-In case you did not find any answer here and in [closed issues](https://github.com/kubernetes/dashboard/issues?q=is%3Aissue+is%3Aclosed), [create new issue](https://github.com/kubernetes/dashboard/issues/new/choose).
+In case you did not find any answer here and in [closed issues](https://github.com/CAPS-Cloud/dashboard/issues?q=is%3Aissue+is%3Aclosed), [create new issue](https://github.com/CAPS-Cloud/dashboard/issues/new/choose).
 
 ### I would like to use development environment on HTTPS, how to do it?
 
@@ -60,7 +60,7 @@ If any of described methods will work then this means it is **not** a Dashboard 
 
 ### I am using Kubernetes GCE cluster but getting forbidden access errors.
 
-Dashboard on GCE is installed by default with very little permissions. That is not an issue. You should grant `kubernetes-dashboard` Service Account more privileges in order to have access to cluster resources. Read [Kubernetes Documentation](https://kubernetes.io/docs/tasks/) to find out how to do it. You can also check [#2326](https://github.com/kubernetes/dashboard/issues/2326) and [#2415 (comment)](https://github.com/kubernetes/dashboard/issues/2415#issuecomment-348370032) for more details.
+Dashboard on GCE is installed by default with very little permissions. That is not an issue. You should grant `kubernetes-dashboard` Service Account more privileges in order to have access to cluster resources. Read [Kubernetes Documentation](https://kubernetes.io/docs/tasks/) to find out how to do it. You can also check [#2326](https://github.com/CAPS-Cloud/dashboard/issues/2326) and [#2415 (comment)](https://github.com/CAPS-Cloud/dashboard/issues/2415#issuecomment-348370032) for more details.
 
 ### `/ui` redirect does not work or shows `Error: 'malformed HTTP response`.
 
@@ -77,4 +77,4 @@ The reason why `/ui` redirect does not work for HTTPS is that it hasn't yet been
 Correct links that can be used to access Dashboard are in our documentation. Check [Accessing Dashboard](../user/accessing-dashboard/README.md) to find out more.
 
 ----
-_Copyright 2019 [The Kubernetes Dashboard Authors](https://github.com/kubernetes/dashboard/graphs/contributors)_
+_Copyright 2019 [The Kubernetes Dashboard Authors](https://github.com/CAPS-Cloud/dashboard/graphs/contributors)_

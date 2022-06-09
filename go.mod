@@ -1,4 +1,4 @@
-module github.com/kubernetes/dashboard
+module github.com/CAPS-Cloud/dashboard
 
 go 1.17
 

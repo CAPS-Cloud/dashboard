@@ -4,7 +4,7 @@
 
 We are following conventions described in [Effective Go](https://golang.org/doc/effective_go.html) document.
 
-Go to our [Go Report Card](https://goreportcard.com/report/github.com/kubernetes/dashboard) to check how well we are doing.
+Go to our [Go Report Card](https://goreportcard.com/report/github.com/CAPS-Cloud/dashboard) to check how well we are doing.
 
 ## Frontend
 
@@ -45,4 +45,4 @@ We use following tools and settings for each check and formatting:
 | i18n    | [xliffmerge](https://github.com/martinroob/ngx-i18nsupport)            | `xliffmergeOptions` in [`package.json`](../../package.json)                           |
 
 ----
-_Copyright 2019 [The Kubernetes Dashboard Authors](https://github.com/kubernetes/dashboard/graphs/contributors)_
+_Copyright 2019 [The Kubernetes Dashboard Authors](https://github.com/CAPS-Cloud/dashboard/graphs/contributors)_

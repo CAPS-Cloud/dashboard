@@ -20,9 +20,9 @@ description: General-purpose web UI for Kubernetes clusters
 keywords:
   - kubernetes
   - dashboard
-home: https://github.com/kubernetes/dashboard
+home: https://github.com/CAPS-Cloud/dashboard
 sources:
-  - https://github.com/kubernetes/dashboard
+  - https://github.com/CAPS-Cloud/dashboard
 maintainers:
   - name: desaintmartin
     email: cdesaintmartin@wiremind.fr

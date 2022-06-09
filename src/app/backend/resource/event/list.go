@@ -17,9 +17,9 @@ package event
 import (
 	"log"
 
-	"github.com/kubernetes/dashboard/src/app/backend/errors"
-	"github.com/kubernetes/dashboard/src/app/backend/resource/common"
-	"github.com/kubernetes/dashboard/src/app/backend/resource/dataselect"
+	"github.com/CAPS-Cloud/dashboard/src/app/backend/errors"
+	"github.com/CAPS-Cloud/dashboard/src/app/backend/resource/common"
+	"github.com/CAPS-Cloud/dashboard/src/app/backend/resource/dataselect"
 	k8sClient "k8s.io/client-go/kubernetes"
 )
 

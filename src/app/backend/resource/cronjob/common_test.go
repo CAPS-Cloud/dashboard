@@ -15,7 +15,7 @@
 package cronjob_test
 
 import (
-	"github.com/kubernetes/dashboard/src/app/backend/errors"
+	"github.com/CAPS-Cloud/dashboard/src/app/backend/errors"
 )
 
 var (

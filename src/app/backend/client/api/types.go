@@ -24,8 +24,8 @@ import (
 	"k8s.io/client-go/tools/clientcmd"
 	"k8s.io/client-go/tools/clientcmd/api"
 
-	authApi "github.com/kubernetes/dashboard/src/app/backend/auth/api"
-	pluginclientset "github.com/kubernetes/dashboard/src/app/backend/plugin/client/clientset/versioned"
+	authApi "github.com/CAPS-Cloud/dashboard/src/app/backend/auth/api"
+	pluginclientset "github.com/CAPS-Cloud/dashboard/src/app/backend/plugin/client/clientset/versioned"
 )
 
 const (

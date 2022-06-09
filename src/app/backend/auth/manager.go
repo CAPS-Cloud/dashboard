@@ -17,9 +17,9 @@ package auth
 import (
 	"k8s.io/client-go/tools/clientcmd/api"
 
-	authApi "github.com/kubernetes/dashboard/src/app/backend/auth/api"
-	clientapi "github.com/kubernetes/dashboard/src/app/backend/client/api"
-	"github.com/kubernetes/dashboard/src/app/backend/errors"
+	authApi "github.com/CAPS-Cloud/dashboard/src/app/backend/auth/api"
+	clientapi "github.com/CAPS-Cloud/dashboard/src/app/backend/client/api"
+	"github.com/CAPS-Cloud/dashboard/src/app/backend/errors"
 )
 
 // Implements AuthManager interface

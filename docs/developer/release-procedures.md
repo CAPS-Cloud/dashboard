@@ -11,11 +11,11 @@ After significant improvements have been done it is worth to release a new versi
     * YAML files from `aio/deploy`
     * Helm Chart from `aio/deploy/helm-chart/kubernetes-dashboard`: `image.tag` of `README.md` and `values.yaml`, `version` and `appVersion` of `Chart.yaml`
 3. Get the pull request reviewed and merged.
-4. Create a git [release](https://github.com/kubernetes/dashboard/releases/) tag for the merged pull request. Release description should include a changelog.
+4. Create a git [release](https://github.com/CAPS-Cloud/dashboard/releases/) tag for the merged pull request. Release description should include a changelog.
 5. Update add-ons on the [Kubernetes](https://github.com/kubernetes/kubernetes/tree/master/cluster/addons/dashboard) repository. If the update is minor, all that needs to be done is to change image version number in the main controller config file (`dashboard-controller.yaml`), and other configs, as described in the header of the config. If the release is major, this needs coordination with Kubernetes core team and possibly alignment with the schedule of the core.
 6. Update addon config in the [minikube](https://github.com/kubernetes/minikube/tree/master/deploy/addons) repository.
 7. Update addon config in the [kops](https://github.com/kubernetes/kops/tree/master/addons/kubernetes-dashboard) repository.
-8. Release Helm Chart by running the `aio/scripts/helm-release-chart.sh` script from the newly created git tag, then push the git `gh-pages` branch of your `https://github.com/kubernetes/dashboard/` git remote.
+8. Release Helm Chart by running the `aio/scripts/helm-release-chart.sh` script from the newly created git tag, then push the git `gh-pages` branch of your `https://github.com/CAPS-Cloud/dashboard/` git remote.
 
 Official release procedures are done by CI after successful TAG build automatically, that are pushed to [`kubernetesui/dashboard*`](https://hub.docker.com/u/kubernetesui) repositories.
 
@@ -36,4 +36,4 @@ There is no need to do anything at all after everything was set up and now the w
 On every successful master build CI provides development releases, that are pushed to [`kubernetesdashboarddev/dashboard*`](https://hub.docker.com/u/kubernetesdashboarddev) repositories. Each build produces one image for each architecture. The images are tagged with `head`.
 
 ----
-_Copyright 2019 [The Kubernetes Dashboard Authors](https://github.com/kubernetes/dashboard/graphs/contributors)_
+_Copyright 2019 [The Kubernetes Dashboard Authors](https://github.com/CAPS-Cloud/dashboard/graphs/contributors)_

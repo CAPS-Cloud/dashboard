@@ -18,4 +18,4 @@ the new releases of used packages. Its pull requests are marked with `area/depen
 - Update `package-lock.json` before sending any changes.
 
 ----
-_Copyright 2019 [The Kubernetes Dashboard Authors](https://github.com/kubernetes/dashboard/graphs/contributors)_
+_Copyright 2019 [The Kubernetes Dashboard Authors](https://github.com/CAPS-Cloud/dashboard/graphs/contributors)_

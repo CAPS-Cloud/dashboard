@@ -1,6 +1,6 @@
 # Labels
 
-This document describes [labels](https://github.com/kubernetes/dashboard/labels) used across Kubernetes Dashboard repository.
+This document describes [labels](https://github.com/CAPS-Cloud/dashboard/labels) used across Kubernetes Dashboard repository.
 
 ## Kind
 
@@ -66,4 +66,4 @@ Other labels used for issues and pull requests.
 * `triage/unresolved` - issue that can not or will not be resolved.
 
 ----
-_Copyright 2019 [The Kubernetes Dashboard Authors](https://github.com/kubernetes/dashboard/graphs/contributors)_
+_Copyright 2019 [The Kubernetes Dashboard Authors](https://github.com/CAPS-Cloud/dashboard/graphs/contributors)_

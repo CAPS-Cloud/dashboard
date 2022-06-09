@@ -49,7 +49,7 @@ Another way to connect to real cluster while developing dashboard is to specify 
 npm run start:https --kubeconfig=<path to your kubeconfig>
 ```
 
-Please see [here](https://github.com/kubernetes/dashboard/blob/master/.npmrc) which options you can specify to run dashboard with `npm`.
+Please see [here](https://github.com/CAPS-Cloud/dashboard/blob/master/.npmrc) which options you can specify to run dashboard with `npm`.
 
 Open a browser and access the UI under `localhost:8080`.
 
@@ -200,4 +200,4 @@ This runs container with `bash` command.
 1. Run `docker exec -it k8s-dashboard-dev gosu user bash`.
 
 ----
-_Copyright 2019 [The Kubernetes Dashboard Authors](https://github.com/kubernetes/dashboard/graphs/contributors)_
+_Copyright 2019 [The Kubernetes Dashboard Authors](https://github.com/CAPS-Cloud/dashboard/graphs/contributors)_

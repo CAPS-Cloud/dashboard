@@ -21,10 +21,10 @@ import (
 
 	client "k8s.io/client-go/kubernetes"
 
-	"github.com/kubernetes/dashboard/src/app/backend/api"
-	"github.com/kubernetes/dashboard/src/app/backend/errors"
-	"github.com/kubernetes/dashboard/src/app/backend/resource/common"
-	"github.com/kubernetes/dashboard/src/app/backend/resource/dataselect"
+	"github.com/CAPS-Cloud/dashboard/src/app/backend/api"
+	"github.com/CAPS-Cloud/dashboard/src/app/backend/errors"
+	"github.com/CAPS-Cloud/dashboard/src/app/backend/resource/common"
+	"github.com/CAPS-Cloud/dashboard/src/app/backend/resource/dataselect"
 )
 
 // NetworkPolicy contains an information about single network policy in the list.

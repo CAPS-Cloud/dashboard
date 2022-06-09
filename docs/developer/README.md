@@ -14,4 +14,4 @@ If you're looking for ideas on what to contribute, in addition to taking a look 
 If you have any further questions, feel free to ask in `#sig-ui` on the [Kubernetes' Slack](https://kubernetes.slack.com/).
 
 ----
-_Copyright 2019 [The Kubernetes Dashboard Authors](https://github.com/kubernetes/dashboard/graphs/contributors)_
+_Copyright 2019 [The Kubernetes Dashboard Authors](https://github.com/CAPS-Cloud/dashboard/graphs/contributors)_

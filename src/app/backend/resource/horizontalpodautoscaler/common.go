@@ -15,7 +15,7 @@
 package horizontalpodautoscaler
 
 import (
-	"github.com/kubernetes/dashboard/src/app/backend/resource/dataselect"
+	"github.com/CAPS-Cloud/dashboard/src/app/backend/resource/dataselect"
 	autoscaling "k8s.io/api/autoscaling/v1"
 )
 

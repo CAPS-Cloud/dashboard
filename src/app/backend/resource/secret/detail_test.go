@@ -18,7 +18,7 @@ import (
 	"reflect"
 	"testing"
 
-	"github.com/kubernetes/dashboard/src/app/backend/api"
+	"github.com/CAPS-Cloud/dashboard/src/app/backend/api"
 
 	v1 "k8s.io/api/core/v1"
 	metaV1 "k8s.io/apimachinery/pkg/apis/meta/v1"

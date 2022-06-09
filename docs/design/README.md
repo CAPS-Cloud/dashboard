@@ -3,12 +3,12 @@ This guide is for anyone interested in contributing design work themselves or co
 
 ## Resources:
 * Get in touch with Dan Romlein (@danielromlein) for general Dashboard UX questions or suggestions of tasks that need design work.
-* Follow the [Getting started guide](https://github.com/kubernetes/dashboard/wiki/Getting-started) to get the most recent version of Dashboard up and running.
+* Follow the [Getting started guide](https://github.com/CAPS-Cloud/dashboard/wiki/Getting-started) to get the most recent version of Dashboard up and running.
 * Dashboard is based on Google’s [Material](https://material.io/guidelines/) design system. Refer to their spec for guidance. 
 
 ## Process:
 1. **Have an idea for a new feature** 💡
-2. **Create a _New Issue_ in the [Dashboard repo](https://github.com/kubernetes/dashboard)** ✍️
+2. **Create a _New Issue_ in the [Dashboard repo](https://github.com/CAPS-Cloud/dashboard)** ✍️
       * If available, this should include…
         * The why of the new feature (required).
         * Use case(s).

@@ -57,4 +57,4 @@ Moreover, Kubernetes-specific names should be capitalized everywhere. This inclu
 * Resource names - Pod, Service, Endpoint, Node etc.
 
 ----
-_Copyright 2019 [The Kubernetes Dashboard Authors](https://github.com/kubernetes/dashboard/graphs/contributors)_
+_Copyright 2019 [The Kubernetes Dashboard Authors](https://github.com/CAPS-Cloud/dashboard/graphs/contributors)_

@@ -28,20 +28,20 @@ import (
 	"github.com/prometheus/client_golang/prometheus/promhttp"
 	"github.com/spf13/pflag"
 
-	"github.com/kubernetes/dashboard/src/app/backend/args"
-	"github.com/kubernetes/dashboard/src/app/backend/auth"
-	authApi "github.com/kubernetes/dashboard/src/app/backend/auth/api"
-	"github.com/kubernetes/dashboard/src/app/backend/auth/jwe"
-	"github.com/kubernetes/dashboard/src/app/backend/cert"
-	"github.com/kubernetes/dashboard/src/app/backend/cert/ecdsa"
-	"github.com/kubernetes/dashboard/src/app/backend/client"
-	clientapi "github.com/kubernetes/dashboard/src/app/backend/client/api"
-	"github.com/kubernetes/dashboard/src/app/backend/handler"
-	"github.com/kubernetes/dashboard/src/app/backend/integration"
-	integrationapi "github.com/kubernetes/dashboard/src/app/backend/integration/api"
-	"github.com/kubernetes/dashboard/src/app/backend/settings"
-	"github.com/kubernetes/dashboard/src/app/backend/sync"
-	"github.com/kubernetes/dashboard/src/app/backend/systembanner"
+	"github.com/CAPS-Cloud/dashboard/src/app/backend/args"
+	"github.com/CAPS-Cloud/dashboard/src/app/backend/auth"
+	authApi "github.com/CAPS-Cloud/dashboard/src/app/backend/auth/api"
+	"github.com/CAPS-Cloud/dashboard/src/app/backend/auth/jwe"
+	"github.com/CAPS-Cloud/dashboard/src/app/backend/cert"
+	"github.com/CAPS-Cloud/dashboard/src/app/backend/cert/ecdsa"
+	"github.com/CAPS-Cloud/dashboard/src/app/backend/client"
+	clientapi "github.com/CAPS-Cloud/dashboard/src/app/backend/client/api"
+	"github.com/CAPS-Cloud/dashboard/src/app/backend/handler"
+	"github.com/CAPS-Cloud/dashboard/src/app/backend/integration"
+	integrationapi "github.com/CAPS-Cloud/dashboard/src/app/backend/integration/api"
+	"github.com/CAPS-Cloud/dashboard/src/app/backend/settings"
+	"github.com/CAPS-Cloud/dashboard/src/app/backend/sync"
+	"github.com/CAPS-Cloud/dashboard/src/app/backend/systembanner"
 )
 
 var (
@@ -256,7 +256,7 @@ func handleFatalInitError(err error) {
 		"invalid apiserver certificates or service account's configuration) or the "+
 		"--apiserver-host param points to a server that does not exist. Reason: %s\n"+
 		"Refer to our FAQ and wiki pages for more information: "+
-		"https://github.com/kubernetes/dashboard/wiki/FAQ", err)
+		"https://github.com/CAPS-Cloud/dashboard/wiki/FAQ", err)
 }
 
 /**

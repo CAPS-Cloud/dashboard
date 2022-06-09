@@ -18,7 +18,7 @@ import (
 	"reflect"
 	"testing"
 
-	"github.com/kubernetes/dashboard/src/app/backend/errors"
+	"github.com/CAPS-Cloud/dashboard/src/app/backend/errors"
 )
 
 func TestHandleHTTPError(t *testing.T) {

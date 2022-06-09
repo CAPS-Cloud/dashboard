@@ -94,9 +94,9 @@ labels:
 - language/[your locale]
 ```
 
-By changes for html files, workflow for i18n on Kubernetes Dashboard updates your translation file. To ease watching updates for your translation file in the future, set `labels` in your `OWNERS` file like above. It would allow you watching updates for your translation file with watching PRs having this label in `kubernetes/dashboard` repository like [this](https://github.com/kubernetes/dashboard/pulls?utf8=%E2%9C%93&q=is%3Apr+label%3Alanguage%2Fja).
+By changes for html files, workflow for i18n on Kubernetes Dashboard updates your translation file. To ease watching updates for your translation file in the future, set `labels` in your `OWNERS` file like above. It would allow you watching updates for your translation file with watching PRs having this label in `kubernetes/dashboard` repository like [this](https://github.com/CAPS-Cloud/dashboard/pulls?utf8=%E2%9C%93&q=is%3Apr+label%3Alanguage%2Fja).
 
 At last, please create Pull Request and submit it to `kubernetes/dashboard`.
 
 ----
-_Copyright 2019 [The Kubernetes Dashboard Authors](https://github.com/kubernetes/dashboard/graphs/contributors)_
+_Copyright 2019 [The Kubernetes Dashboard Authors](https://github.com/CAPS-Cloud/dashboard/graphs/contributors)_

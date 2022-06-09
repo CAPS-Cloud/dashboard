@@ -1,6 +1,6 @@
 # Dashboard arguments
 
-Dashboard container accepts multiple arguments that can be used to customize it a bit. For example, we are using `--auto-generate-certificates` flag in our recommended setup [YAML files](https://github.com/kubernetes/dashboard/blob/master/aio/deploy/recommended.yaml) to pass certificates to Dashboard.
+Dashboard container accepts multiple arguments that can be used to customize it a bit. For example, we are using `--auto-generate-certificates` flag in our recommended setup [YAML files](https://github.com/CAPS-Cloud/dashboard/blob/master/aio/deploy/recommended.yaml) to pass certificates to Dashboard.
 
 ## Arguments
 
@@ -32,4 +32,4 @@ Dashboard container accepts multiple arguments that can be used to customize it 
 | system-banner-severity      | INFO               | Severity of system banner. Should be one of 'INFO\                                                                                                                                                                                                                                                        |WARNING\|ERROR'. |
 
 ----
-_Copyright 2019 [The Kubernetes Dashboard Authors](https://github.com/kubernetes/dashboard/graphs/contributors)_
+_Copyright 2019 [The Kubernetes Dashboard Authors](https://github.com/CAPS-Cloud/dashboard/graphs/contributors)_

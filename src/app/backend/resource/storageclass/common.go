@@ -15,7 +15,7 @@
 package storageclass
 
 import (
-	"github.com/kubernetes/dashboard/src/app/backend/resource/dataselect"
+	"github.com/CAPS-Cloud/dashboard/src/app/backend/resource/dataselect"
 	storage "k8s.io/api/storage/v1"
 )
 

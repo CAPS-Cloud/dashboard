@@ -20,9 +20,9 @@ import (
 
 	coreV1 "k8s.io/api/core/v1"
 
-	"github.com/kubernetes/dashboard/src/app/backend/api"
-	"github.com/kubernetes/dashboard/src/app/backend/resource/common"
-	"github.com/kubernetes/dashboard/src/app/backend/resource/dataselect"
+	"github.com/CAPS-Cloud/dashboard/src/app/backend/api"
+	"github.com/CAPS-Cloud/dashboard/src/app/backend/resource/common"
+	"github.com/CAPS-Cloud/dashboard/src/app/backend/resource/dataselect"
 
 	metaV1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 	"k8s.io/apimachinery/pkg/apis/meta/v1/unstructured"

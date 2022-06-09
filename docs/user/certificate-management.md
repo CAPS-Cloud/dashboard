@@ -46,4 +46,4 @@ openssl x509 -req -sha256 -days 365 -in dashboard.csr -signkey dashboard.key -ou
 The `dashboard.crt` file is your certificate suitable for use with Dashboard along with the `dashboard.key` private key.
 
 ----
-_Copyright 2019 [The Kubernetes Dashboard Authors](https://github.com/kubernetes/dashboard/graphs/contributors)_
+_Copyright 2019 [The Kubernetes Dashboard Authors](https://github.com/CAPS-Cloud/dashboard/graphs/contributors)_

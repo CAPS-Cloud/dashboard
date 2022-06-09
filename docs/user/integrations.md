@@ -16,4 +16,4 @@ The easiest way to check if `metrics-server` is installed and working properly i
 Starting from Kubernetes Dashboard v2.0.0 Heapster is no longer maintained. Use [metrics-server](#metrics-server) integration to enable metrics.
 
 ----
-_Copyright 2019 [The Kubernetes Dashboard Authors](https://github.com/kubernetes/dashboard/graphs/contributors)_
+_Copyright 2019 [The Kubernetes Dashboard Authors](https://github.com/CAPS-Cloud/dashboard/graphs/contributors)_
