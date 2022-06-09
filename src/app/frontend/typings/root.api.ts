@@ -736,6 +736,11 @@ export interface AuthResponse {
   errors: K8sError[];
 }
 
+export interface IoTPlatformToken {
+  caps_token: string;
+  errors: K8sError[];
+}
+
 export interface CanIResponse {
   allowed: boolean;
 }

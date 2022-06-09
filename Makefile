@@ -30,6 +30,7 @@ PROD_BINARY = dist/amd64/dashboard
 SERVE_DIRECTORY = .tmp/serve
 SERVE_BINARY = .tmp/serve/dashboard
 RELEASE_IMAGE = kubernetesui/dashboard
+REGISTRY_URL = registry.caps.in.tum.de
 RELEASE_VERSION = v2.6.0
 RELEASE_IMAGE_NAMES += $(foreach arch, $(ARCHITECTURES), $(RELEASE_IMAGE)-$(arch):$(RELEASE_VERSION))
 RELEASE_IMAGE_NAMES_LATEST += $(foreach arch, $(ARCHITECTURES), $(RELEASE_IMAGE)-$(arch):latest)
@@ -245,8 +246,8 @@ e2e-headed: start-cluster
 docker-build-release: build-cross
 	for ARCH in $(ARCHITECTURES) ; do \
 		docker buildx build \
-			-t $(RELEASE_IMAGE)-$$ARCH:$(RELEASE_VERSION) \
-			-t $(RELEASE_IMAGE)-$$ARCH:latest \
+			-t ${REGISTRY_URL}/$(RELEASE_IMAGE)-$$ARCH:$(RELEASE_VERSION) \
+			-t ${REGISTRY_URL}/$(RELEASE_IMAGE)-$$ARCH:latest \
 			--build-arg BUILDPLATFORM=linux/$$ARCH \
 			--platform linux/$$ARCH \
 			--push \
@@ -255,16 +256,16 @@ docker-build-release: build-cross
 
 .PHONY: docker-push-release
 docker-push-release: docker-build-release
-	docker manifest create --amend $(RELEASE_IMAGE):$(RELEASE_VERSION) $(RELEASE_IMAGE_NAMES) ; \
-  docker manifest create --amend $(RELEASE_IMAGE):latest $(RELEASE_IMAGE_NAMES_LATEST) ; \
-  docker manifest push $(RELEASE_IMAGE):$(RELEASE_VERSION) ; \
-  docker manifest push $(RELEASE_IMAGE):latest
+	docker manifest create --amend ${REGISTRY_URL}/$(RELEASE_IMAGE):$(RELEASE_VERSION) $(RELEASE_IMAGE_NAMES) ; \
+  docker manifest create --amend ${REGISTRY_URL}/$(RELEASE_IMAGE):latest $(RELEASE_IMAGE_NAMES_LATEST) ; \
+  docker manifest push ${REGISTRY_URL}/$(RELEASE_IMAGE):$(RELEASE_VERSION) ; \
+  docker manifest push ${REGISTRY_URL}/$(RELEASE_IMAGE):latest
 
 .PHONY: docker-build-head
 docker-build-head: build-cross
 	for ARCH in $(ARCHITECTURES) ; do \
 		docker buildx build \
-			-t $(HEAD_IMAGE)-$$ARCH:$(HEAD_VERSION) \
+			-t ${REGISTRY_URL}/$(HEAD_IMAGE)-$$ARCH:$(HEAD_VERSION) \
 			--build-arg BUILDPLATFORM=linux/$$ARCH \
 			--platform linux/$$ARCH \
 			--push \
@@ -273,5 +274,5 @@ docker-build-head: build-cross
 
 .PHONY: docker-push-head
 docker-push-head: docker-build-head
-	docker manifest create --amend $(HEAD_IMAGE):$(HEAD_VERSION) $(HEAD_IMAGE_NAMES)
-	docker manifest push $(HEAD_IMAGE):$(HEAD_VERSION) ; \
+	docker manifest create --amend ${REGISTRY_URL}/$(HEAD_IMAGE):$(HEAD_VERSION) $(HEAD_IMAGE_NAMES)
+	docker manifest push ${REGISTRY_URL}/$(HEAD_IMAGE):$(HEAD_VERSION) ; \

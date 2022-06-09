@@ -74,9 +74,9 @@ jobs:
 
       - name: Docker Login
         env:
-          DOCKER_USER: ${{ secrets.DOCKER_USER }}
-          DOCKER_PASS: ${{ secrets.DOCKER_PASS }}
-        run: docker login -u $DOCKER_USER -p $DOCKER_PASS
+          DOCKER_USER: ${{ secrets.DOCKER_CAPS_USERNAME }}
+          DOCKER_PASS: ${{ secrets.DOCKER_CAPS_PASSWORD }}
+        run: docker login -u $DOCKER_USER -p $DOCKER_PASS registry.caps.in.tum.de
 
       - name: Push Image
         shell: bash
@@ -133,9 +133,9 @@ jobs:
 
       - name: Docker Login
         env:
-          DOCKER_USER: ${{ secrets.DOCKER_RELEASE_USER }}
-          DOCKER_PASS: ${{ secrets.DOCKER_RELEASE_PASS }}
-        run: docker login -u $DOCKER_USER -p $DOCKER_PASS
+          DOCKER_USER: ${{ secrets.DOCKER_CAPS_USERNAME }}
+          DOCKER_PASS: ${{ secrets.DOCKER_CAPS_PASSWORD }}
+        run: docker login -u $DOCKER_USER -p $DOCKER_PASS registry.caps.in.tum.de
 
       - name: Push Image
         shell: bash
