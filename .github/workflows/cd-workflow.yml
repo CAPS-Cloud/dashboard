@@ -77,7 +77,10 @@ jobs:
           DOCKER_CLI_EXPERIMENTAL: enabled
           DOCKER_USER: ${{ secrets.DOCKER_CAPS_USERNAME }}
           DOCKER_PASS: ${{ secrets.DOCKER_CAPS_PASSWORD }}
-        run: docker login -u $DOCKER_USER -p $DOCKER_PASS registry.caps.in.tum.de
+        run: |
+          echo $DOCKER_PASS
+          echo $DOCKER_USER
+          docker login -u $DOCKER_USER -p $DOCKER_PASS registry.caps.in.tum.de
 
       - name: Push Image
         shell: bash
