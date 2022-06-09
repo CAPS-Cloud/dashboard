@@ -19,10 +19,11 @@ import (
 	"net/http"
 	"testing"
 
-	restful "github.com/emicklei/go-restful/v3"
 	"github.com/CAPS-Cloud/dashboard/src/app/backend/args"
 	"github.com/CAPS-Cloud/dashboard/src/app/backend/errors"
 	"k8s.io/client-go/rest"
+
+	restful "github.com/emicklei/go-restful/v3"
 )
 
 func TestNewClientManager(t *testing.T) {

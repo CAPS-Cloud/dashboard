@@ -17,10 +17,11 @@ package parser
 import (
 	"strconv"
 	"strings"
-	
-	"github.com/emicklei/go-restful/v3"
+
 	metricapi "github.com/CAPS-Cloud/dashboard/src/app/backend/integration/metric/api"
 	"github.com/CAPS-Cloud/dashboard/src/app/backend/resource/dataselect"
+
+	"github.com/emicklei/go-restful/v3"
 )
 
 func parsePaginationPathParameter(request *restful.Request) *dataselect.PaginationQuery {

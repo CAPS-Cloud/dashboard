@@ -18,8 +18,9 @@ import (
 	"log"
 	"net/http"
 
-	restful "github.com/emicklei/go-restful/v3"
 	"k8s.io/apimachinery/pkg/api/errors"
+
+	restful "github.com/emicklei/go-restful/v3"
 )
 
 // NonCriticalErrors is an array of error statuses, that are non-critical. That means, that this error can be

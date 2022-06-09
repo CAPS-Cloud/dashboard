@@ -24,13 +24,14 @@ import (
 	"net/http"
 	"sync"
 
-	restful "github.com/emicklei/go-restful/v3"
 	"gopkg.in/igm/sockjs-go.v2/sockjs"
 	v1 "k8s.io/api/core/v1"
 	"k8s.io/client-go/kubernetes"
 	"k8s.io/client-go/kubernetes/scheme"
 	"k8s.io/client-go/rest"
 	"k8s.io/client-go/tools/remotecommand"
+
+	restful "github.com/emicklei/go-restful/v3"
 )
 
 const END_OF_TRANSMISSION = "\u0004"

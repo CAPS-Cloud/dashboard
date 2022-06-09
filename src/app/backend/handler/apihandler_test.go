@@ -23,7 +23,6 @@ import (
 	"reflect"
 	"strings"
 
-	restful "github.com/emicklei/go-restful/v3"
 	"github.com/CAPS-Cloud/dashboard/src/app/backend/args"
 	"github.com/CAPS-Cloud/dashboard/src/app/backend/auth"
 	authApi "github.com/CAPS-Cloud/dashboard/src/app/backend/auth/api"
@@ -33,6 +32,8 @@ import (
 	"github.com/CAPS-Cloud/dashboard/src/app/backend/sync"
 	"github.com/CAPS-Cloud/dashboard/src/app/backend/systembanner"
 	"k8s.io/client-go/kubernetes/fake"
+
+	restful "github.com/emicklei/go-restful/v3"
 )
 
 func getTokenManager() authApi.TokenManager {

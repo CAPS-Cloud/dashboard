@@ -21,8 +21,9 @@ import (
 	"reflect"
 	"testing"
 
-	restful "github.com/emicklei/go-restful/v3"
 	"github.com/CAPS-Cloud/dashboard/src/app/backend/client"
+
+	restful "github.com/emicklei/go-restful/v3"
 )
 
 func TestValidateLoginStatus(t *testing.T) {

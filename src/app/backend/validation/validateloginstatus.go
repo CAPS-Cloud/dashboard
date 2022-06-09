@@ -15,9 +15,10 @@
 package validation
 
 import (
-	restful "github.com/emicklei/go-restful/v3"
 	"github.com/CAPS-Cloud/dashboard/src/app/backend/args"
 	"github.com/CAPS-Cloud/dashboard/src/app/backend/client"
+
+	restful "github.com/emicklei/go-restful/v3"
 )
 
 // LoginStatus is returned as a response to login status check. Used by the frontend to determine if is logged in

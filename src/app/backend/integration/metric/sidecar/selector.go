@@ -17,11 +17,12 @@ package sidecar
 import (
 	"fmt"
 
-	"github.com/emicklei/go-restful/v3/log"
 	"github.com/CAPS-Cloud/dashboard/src/app/backend/api"
 	metricapi "github.com/CAPS-Cloud/dashboard/src/app/backend/integration/metric/api"
 	v1 "k8s.io/api/core/v1"
 	"k8s.io/apimachinery/pkg/types"
+
+	"github.com/emicklei/go-restful/v3/log"
 )
 
 type sidecarSelector struct {

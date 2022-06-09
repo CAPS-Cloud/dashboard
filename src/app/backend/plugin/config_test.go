@@ -22,7 +22,6 @@ import (
 
 	"github.com/CAPS-Cloud/dashboard/src/app/backend/plugin/apis/v1alpha1"
 
-	"github.com/emicklei/go-restful/v3"
 	authApi "github.com/CAPS-Cloud/dashboard/src/app/backend/auth/api"
 	clientapi "github.com/CAPS-Cloud/dashboard/src/app/backend/client/api"
 	"github.com/CAPS-Cloud/dashboard/src/app/backend/plugin/client/clientset/versioned"
@@ -36,6 +35,8 @@ import (
 	"k8s.io/client-go/rest"
 	"k8s.io/client-go/tools/clientcmd"
 	"k8s.io/client-go/tools/clientcmd/api"
+
+	"github.com/emicklei/go-restful/v3"
 )
 
 func Test_handleConfig(t *testing.T) {

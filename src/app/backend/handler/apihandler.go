@@ -29,10 +29,11 @@ import (
 
 	"github.com/CAPS-Cloud/dashboard/src/app/backend/plugin"
 
-	"github.com/emicklei/go-restful/v3"
 	"golang.org/x/net/xsrftoken"
 	"k8s.io/apimachinery/pkg/runtime"
 	"k8s.io/client-go/tools/remotecommand"
+
+	"github.com/emicklei/go-restful/v3"
 
 	"github.com/CAPS-Cloud/dashboard/src/app/backend/api"
 	"github.com/CAPS-Cloud/dashboard/src/app/backend/auth"

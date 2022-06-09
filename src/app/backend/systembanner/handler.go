@@ -16,9 +16,10 @@ package systembanner
 
 import (
 	"net/http"
-	
-	restful "github.com/emicklei/go-restful/v3"
+
 	"github.com/CAPS-Cloud/dashboard/src/app/backend/systembanner/api"
+
+	restful "github.com/emicklei/go-restful/v3"
 )
 
 // SystemBannerHandler manages all endpoints related to system banner management.

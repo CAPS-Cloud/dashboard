@@ -23,7 +23,6 @@ import (
 	v12 "k8s.io/api/authentication/v1"
 	k8serrors "k8s.io/apimachinery/pkg/api/errors"
 
-	"github.com/emicklei/go-restful/v3"
 	v1 "k8s.io/api/authorization/v1"
 	apiextensionsclientset "k8s.io/apiextensions-apiserver/pkg/client/clientset/clientset"
 	metaV1 "k8s.io/apimachinery/pkg/apis/meta/v1"
@@ -31,6 +30,8 @@ import (
 	"k8s.io/client-go/rest"
 	"k8s.io/client-go/tools/clientcmd"
 	"k8s.io/client-go/tools/clientcmd/api"
+
+	"github.com/emicklei/go-restful/v3"
 
 	pluginclientset "github.com/CAPS-Cloud/dashboard/src/app/backend/plugin/client/clientset/versioned"
 	"github.com/CAPS-Cloud/dashboard/src/app/backend/resource/customresourcedefinition"

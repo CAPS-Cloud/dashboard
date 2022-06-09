@@ -15,7 +15,6 @@
 package api
 
 import (
-	"github.com/emicklei/go-restful/v3"
 	v1 "k8s.io/api/authorization/v1"
 	apiextensionsclientset "k8s.io/apiextensions-apiserver/pkg/client/clientset/clientset"
 	"k8s.io/apimachinery/pkg/runtime"
@@ -23,6 +22,8 @@ import (
 	"k8s.io/client-go/rest"
 	"k8s.io/client-go/tools/clientcmd"
 	"k8s.io/client-go/tools/clientcmd/api"
+
+	"github.com/emicklei/go-restful/v3"
 
 	authApi "github.com/CAPS-Cloud/dashboard/src/app/backend/auth/api"
 	pluginclientset "github.com/CAPS-Cloud/dashboard/src/app/backend/plugin/client/clientset/versioned"

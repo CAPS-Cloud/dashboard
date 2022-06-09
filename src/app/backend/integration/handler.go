@@ -17,8 +17,9 @@ package integration
 import (
 	"net/http"
 
-	restful "github.com/emicklei/go-restful/v3"
 	"github.com/CAPS-Cloud/dashboard/src/app/backend/integration/api"
+
+	restful "github.com/emicklei/go-restful/v3"
 )
 
 // IntegrationHandler manages all endpoints related to integrated applications, such as state.
