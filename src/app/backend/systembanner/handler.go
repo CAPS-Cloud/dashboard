@@ -16,9 +16,8 @@ package systembanner
 
 import (
 	"net/http"
-
-	restful "github.com/emicklei/go-restful/v3"
 	
+	restful "github.com/emicklei/go-restful/v3"
 	"github.com/CAPS-Cloud/dashboard/src/app/backend/systembanner/api"
 )
 
