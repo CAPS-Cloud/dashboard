@@ -216,13 +216,13 @@ export class LoginComponent implements OnInit {
           password: this.password_,
         } as LoginSpec;
       case LoginModes.Platform:
-        if (typeof this.token_ !== 'undefined' && this.token_.length > 0) {
-          return {token: this.token_} as LoginSpec;
-        } else if (typeof this.token_ !== 'undefined') {
+        if (typeof this.token_ === 'undefined') {
           return {
             username: this.caps_username_,
             password: this.caps_password_,
           } as LoginSpec;
+        } else if (typeof this.token_ !== 'undefined' && this.token_.length > 0) {
+          return {token: this.token_} as LoginSpec;
         }
         return {} as LoginSpec;
       default:
