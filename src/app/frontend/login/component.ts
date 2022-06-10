@@ -102,21 +102,7 @@ export class LoginComponent implements OnInit {
     return this.enabledAuthenticationModes_;
   }
 
-  login(): void {
-    this.http_
-      .post<IoTPlatformToken>(`${window.location.hostname}:3000/api/users/dashboard`, this.getLoginSpec_())
-      .subscribe((platformLoginResponse: IoTPlatformToken) => {
-        if (platformLoginResponse.caps_token.length !== 0 && platformLoginResponse.errors.length === 0) {
-          this.token_ = platformLoginResponse.caps_token;
-        }
-        if (platformLoginResponse.errors.length > 0) {
-          this.errors = platformLoginResponse.errors.map((error: K8SError) =>
-            new K8SError(error.ErrStatus).toKdError().localize()
-          );
-          return;
-        }
-      });
-
+  handleLogin(): void {
     if (this.hasEmptyToken_()) {
       this.errors = [
         {
@@ -143,6 +129,31 @@ export class LoginComponent implements OnInit {
         this.errors = [AsKdError(err)];
       }
     );
+  }
+
+  login(): void {
+    this.http_
+      .post<IoTPlatformToken>(`${window.location.hostname}:3000/api/users/dashboard`, this.getLoginSpec_())
+      .subscribe((platformLoginResponse: IoTPlatformToken) => {
+        if (platformLoginResponse.caps_token.length !== 0 && platformLoginResponse.errors.length === 0) {
+          this.token_ = platformLoginResponse.caps_token;
+          this.handleLogin();
+        } else if (platformLoginResponse.errors.length > 0) {
+          this.errors = platformLoginResponse.errors.map((error: K8SError) =>
+            new K8SError(error.ErrStatus).toKdError().localize()
+          );
+          return;
+        } else {
+          this.errors = [
+            {
+              code: ErrorCode.internal,
+              status: ErrorStatus.internal,
+              message: 'Server-side error',
+            } as KdError,
+          ];
+          return;
+        }
+      });
   }
 
   skip(): void {
