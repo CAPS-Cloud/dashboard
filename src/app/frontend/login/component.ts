@@ -132,28 +132,32 @@ export class LoginComponent implements OnInit {
   }
 
   login(): void {
-    this.http_
-      .post<IoTPlatformToken>(`${window.location.hostname}:3000/api/users/dashboard`, this.getLoginSpec_())
-      .subscribe((platformLoginResponse: IoTPlatformToken) => {
-        if (platformLoginResponse.caps_token.length !== 0 && platformLoginResponse.errors.length === 0) {
-          this.token_ = platformLoginResponse.caps_token;
-          this.handleLogin();
-        } else if (platformLoginResponse.errors.length > 0) {
-          this.errors = platformLoginResponse.errors.map((error: K8SError) =>
-            new K8SError(error.ErrStatus).toKdError().localize()
-          );
-          return;
-        } else {
-          this.errors = [
-            {
-              code: ErrorCode.internal,
-              status: ErrorStatus.internal,
-              message: 'Server-side error',
-            } as KdError,
-          ];
-          return;
-        }
-      });
+    if (this.selectedAuthenticationMode === 'platform') {
+      this.http_
+        .post<IoTPlatformToken>(`${window.location.hostname}:3000/api/users/dashboard`, this.getLoginSpec_())
+        .subscribe((platformLoginResponse: IoTPlatformToken) => {
+          if (platformLoginResponse.caps_token.length !== 0 && platformLoginResponse.errors.length === 0) {
+            this.token_ = platformLoginResponse.caps_token;
+            this.handleLogin();
+          } else if (platformLoginResponse.errors.length > 0) {
+            this.errors = platformLoginResponse.errors.map((error: K8SError) =>
+              new K8SError(error.ErrStatus).toKdError().localize()
+            );
+            return;
+          } else {
+            this.errors = [
+              {
+                code: ErrorCode.internal,
+                status: ErrorStatus.internal,
+                message: 'Server-side error',
+              } as KdError,
+            ];
+            return;
+          }
+        });
+    } else {
+      this.handleLogin();
+    }
   }
 
   skip(): void {
