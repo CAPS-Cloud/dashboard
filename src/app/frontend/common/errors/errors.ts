@@ -46,6 +46,11 @@ const localizedErrors: {[key: string]: string} = {
   MSG_LOGIN_UNAUTHORIZED_ERROR: 'Invalid credentials provided',
   MSG_DEPLOY_NAMESPACE_MISMATCH_ERROR: 'Cannot deploy to the namespace different than the currently selected one.',
   MSG_DEPLOY_EMPTY_NAMESPACE_ERROR: 'Cannot deploy the content as the target namespace is not specified.',
+  MSG_NOT_MATCHING_CAPS_USERNAME: 'Your username is invalid.',
+  MSG_INVALID_CAPS_USER_ROLE: 'Your role does not give you access to this resource.',
+  MSG_INCORRECT_CAPS_PASSWORD: 'Your given password is incorrect.',
+  MSG_UNEXPECTED_CAPS_ERROR: 'Unexpected error.',
+  MSG_EMPTY_CAPS_CREDENTIALS: 'Login is not allowed with empty credentials',
 };
 
 /**
