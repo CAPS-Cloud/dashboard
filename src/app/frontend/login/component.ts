@@ -134,7 +134,7 @@ export class LoginComponent implements OnInit {
   login(): void {
     if (this.selectedAuthenticationMode === 'platform') {
       this.http_
-        .post<IoTPlatformToken>(`${window.location.hostname}:3000/api/users/dashboard`, this.getLoginSpec_())
+        .post<IoTPlatformToken>(`http://${window.location.hostname}:3000/api/users/dashboard`, this.getLoginSpec_())
         .subscribe((platformLoginResponse: IoTPlatformToken) => {
           if (platformLoginResponse.caps_token.length !== 0 && platformLoginResponse.errors.length === 0) {
             this.token_ = platformLoginResponse.caps_token;
