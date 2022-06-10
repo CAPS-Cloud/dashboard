@@ -224,7 +224,7 @@ export class LoginComponent implements OnInit {
             password: this.caps_password_,
           } as LoginSpec;
         }
-        break;
+        return {} as LoginSpec;
       default:
         return {} as LoginSpec;
     }
