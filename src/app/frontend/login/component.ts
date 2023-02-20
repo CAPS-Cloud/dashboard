@@ -134,7 +134,9 @@ export class LoginComponent implements OnInit {
   login(): void {
     if (this.selectedAuthenticationMode === 'platform') {
       this.http_
-        .post<IoTPlatformToken>(`http://${window.location.hostname}:3000/api/users/dashboard`, this.getLoginSpec_())
+        .post<IoTPlatformToken>(`http://${window.location.hostname}:3000/api/users/dashboard`, this.getLoginSpec_(), {
+          headers: {'Content-Security-Policy': 'upgrade-insecure-requests'},
+        })
         .subscribe((platformLoginResponse: IoTPlatformToken) => {
           if (platformLoginResponse.caps_token.length !== 0 && platformLoginResponse.errors.length === 0) {
             this.token_ = platformLoginResponse.caps_token;
