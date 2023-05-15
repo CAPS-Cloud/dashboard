@@ -274,5 +274,8 @@ docker-build-head: build-cross
 
 .PHONY: docker-push-head
 docker-push-head: docker-build-head
-	docker manifest create --amend ${REGISTRY_URL}/$(HEAD_IMAGE):$(HEAD_VERSION) $(HEAD_IMAGE_NAMES)
-	docker manifest push ${REGISTRY_URL}/$(HEAD_IMAGE):$(HEAD_VERSION) ; \
+	for ARCH in $(ARCHITECTURES) ; do \
+		docker push ${REGISTRY_URL}/$(HEAD_IMAGE)-$$ARCH:$(HEAD_VERSION) ; \
+	done ; \
+	#docker manifest create --amend ${REGISTRY_URL}/$(HEAD_IMAGE):$(HEAD_VERSION) $(HEAD_IMAGE_NAMES)
+	#docker manifest push ${REGISTRY_URL}/$(HEAD_IMAGE):$(HEAD_VERSION) ; \
