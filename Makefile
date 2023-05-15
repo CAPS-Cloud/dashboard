@@ -268,7 +268,7 @@ docker-build-head: build-cross
 			-t ${REGISTRY_URL}/$(HEAD_IMAGE)-$$ARCH:$(HEAD_VERSION) \
 			--build-arg BUILDPLATFORM=linux/$$ARCH \
 			--platform linux/$$ARCH \
-			--push \
+			-o type=docker \
 			dist/$$ARCH ; \
 	done ; \
 
