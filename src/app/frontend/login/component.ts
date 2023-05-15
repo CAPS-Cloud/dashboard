@@ -12,7 +12,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-import {HttpClient, HttpErrorResponse} from '@angular/common/http';
+import {HttpClient, HttpErrorResponse, HttpHeaders} from '@angular/common/http';
 import {Component, Inject, NgZone, OnInit} from '@angular/core';
 import {ActivatedRoute, Router} from '@angular/router';
 import {
@@ -135,7 +135,7 @@ export class LoginComponent implements OnInit {
     if (this.selectedAuthenticationMode === 'platform') {
       this.http_
         .post<IoTPlatformToken>(`http://${window.location.hostname}:3000/api/users/dashboard`, this.getLoginSpec_(), {
-          headers: {'Content-Security-Policy': 'upgrade-insecure-requests'},
+          headers: new HttpHeaders({'Content-Security-Policy': 'upgrade-insecure-requests'}),
         })
         .subscribe((platformLoginResponse: IoTPlatformToken) => {
           if (platformLoginResponse.caps_token.length !== 0 && platformLoginResponse.errors.length === 0) {
