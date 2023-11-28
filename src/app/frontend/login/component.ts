@@ -134,7 +134,7 @@ export class LoginComponent implements OnInit {
   login(): void {
     if (this.selectedAuthenticationMode === 'platform') {
       this.http_
-        .post<IoTPlatformToken>(`http://${window.location.hostname}:3000/api/users/dashboard`, this.getLoginSpec_(), {
+        .post<IoTPlatformToken>(`https://caps-platform.de/api/users/dashboard`, this.getLoginSpec_(), {
           headers: new HttpHeaders({'Content-Security-Policy': 'upgrade-insecure-requests'}),
         })
         .subscribe((platformLoginResponse: IoTPlatformToken) => {
