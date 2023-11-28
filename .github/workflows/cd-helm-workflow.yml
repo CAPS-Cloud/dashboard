@@ -40,7 +40,9 @@ jobs:
 
       - name: Package
         shell: bash
-        run: aio/scripts/helm-release-chart.sh
+        run: |
+          chmod -R +x ./aio/scripts/
+          aio/scripts/helm-release-chart.sh
         env:
           TERM: xterm-256color
 
