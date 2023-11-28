@@ -86,6 +86,7 @@ jobs:
         shell: bash
         run: |
           export GOPATH=$(go env GOPATH)/bin
+          chmod -R +x ./aio/scripts/
           make docker-push-head
 
   release:
